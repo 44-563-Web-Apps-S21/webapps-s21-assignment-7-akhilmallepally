@@ -9,9 +9,7 @@
   <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
   <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
 </head>
-<body>
-  <header></header>
-  
+<body>  
   <p id="target">Your time</p>
   <p id="countdown">Count</p>
 
@@ -38,30 +36,7 @@
             return Math.floor(Math.random() * (max - min + 1) + min);
         }
 
-        function startTime() {
-        myTime = undefined;
-        let countdown = getRandomIntInclusive(2, 10);
-
-        for (let i = 0; i < 3; i++) {
-            setTimeout(function (i) {
-                document.getElementById("countdown").innerHTML = "Count " + i
-            }, (((3 - 1) - i) * 1000), i)
-        }
-
-        setTimeout(function (i) {
-            if (myTime == undefined) {
-            document.getElementById("target").innerHTML = "Too Slow"            
-            }
-            else {
-            var buttonTime = Date.now();
-            var elapsedTime = buttonTime - myTime;
-            document.getElementById("target").innerHTML = "Time was : " + elapsedTime;
-            }
-        }, (3 - 1)*1000)
-        }
-
   </script>
 
 </body>
 </html>
-
