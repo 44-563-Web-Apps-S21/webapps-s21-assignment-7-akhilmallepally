@@ -1,9 +1,15 @@
 <!DOCTYPE html>
-<html>
-    <head>
-        <title>Treasure page</title>
-        <style>
-            .flex-container {
+<html lang="en">
+<head>
+  <title>Treasure</title>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+  <style>
+    .flex-container {
               display: flex;  flex-direction:row;
               background-color: lightcyan;
           }
@@ -20,52 +26,100 @@
                  background-color: lightblue;
               }
             }
-        </style>
-    </head>
-    <body>
-        <h3>Find the Treasure Akhil Kumar Reddy Mallepally</h3>
-        <div>Click on the squares to find the treasure</div>
-        <div class="flex-container" id="clicks">
-            <p>Number of clicks is zero.</p></div>
-        <div class="flex-container" id="distance">
-            <p>Distance is unknown.</p></div>
-            
-                <div class="flex-container" id="book">
-                    <div class = "Row1">
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                    </div>
-                    <div class= "Row2">
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                    </div>  
-                    <div class="Row3">
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                    </div>
-                    <div class= "Row4">
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                    </div>
-                    <div class= "Row5">
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                        <div><img src="book.jpg" alt="dustybook" width="100" height="100"></div>
-                    </div> 
-                      </div>
-    </body>
+</style>
+</head>
+
+<body>
+<h1>Find the Treasure</h1>
+
+<div>Click on the squares to find the treasure</div>
+<div class="flex-container" id="clicks">
+    <p>Number of clicks is zero.</p></div>
+<div class="flex-container" id="distance">
+    <p>Distance is unknown.</p></div>
+    
+        <div class="flex-container" id="book">
+
+
+
+<div class="flex-container">
+    <div class="Row1">
+        <div><img src="book.jpg" id="0" onclick="makeGuess(0)" width=100 height=100></div>
+        <div><img src="book.jpg" id="5" onclick="makeGuess(1)" width=100 height=100></div>
+        <div><img src="book.jpg" id="10" onclick="makeGuess(2)" width=100 height=100></div>
+        <div><img src="book.jpg" id="15" onclick="makeGuess(3)" width=100 height=100></div>
+        <div><img src="book.jpg" id="20" onclick="makeGuess(4)" width=100 height=100></div>
+    </div>
+    <div class="Row2">
+        <div><img src="book.jpg" id="1" onclick="makeGuess(5)" width=100 height=100></div>
+        <div><img src="book.jpg" id="6" onclick="makeGuess(6)" width=100 height=100></div>
+        <div><img src="book.jpg" id="11" onclick="makeGuess(7)" width=100 height=100></div>
+        <div><img src="book.jpg" id="16" onclick="makeGuess(8)" width=100 height=100></div>
+        <div><img src="book.jpg" id="21" onclick="makeGuess(9)" width=100 height=100></div>
+    </div>
+    <div class="Row3">
+        <div><img src="book.jpg" id="2" onclick="makeGuess(10)" width=100 height=100></div>
+        <div><img src="book.jpg" id="7" onclick="makeGuess(11)" width=100 height=100></div>
+        <div><img src="book.jpg" id="12" onclick="makeGuess(12)" width=100 height=100></div>
+        <div><img src="book.jpg" id="17" onclick="makeGuess(13)" width=100 height=100></div>
+        <div><img src="book.jpg" id="22" onclick="makeGuess(14)" width=100 height=100></div>
+    </div>
+    <div class="Row4">
+        <div><img src="book.jpg" id="3" onclick="makeGuess(15)" width=100 height=100></div>
+        <div><img src="book.jpg" id="8" onclick="makeGuess(16)" width=100 height=100></div>
+        <div><img src="book.jpg" id="13" onclick="makeGuess(17)" width=100 height=100></div>
+        <div><img src="book.jpg" id="18" onclick="makeGuess(18)" width=100 height=100></div>
+        <div><img src="book.jpg" id="23" onclick="makeGuess(19)" width=100 height=100></div>
+    </div>
+    <div class="Row5">
+        <div><img src="book.jpg" id="4" onclick="makeGuess(20)" width=100 height=100></div>
+        <div><img src="book.jpg" id="9" onclick="makeGuess(21)" width=100 height=100></div>
+        <div><img src="book.jpg" id="14" onclick="makeGuess(22)" width=100 height=100></div>
+        <div><img src="book.jpg" id="19" onclick="makeGuess(23)" width=100 height=100></div>
+        <div><img src="book.jpg" id="24" onclick="makeGuess(24)" width=100 height=100></div>
+    </div>
+</div>
+<script>
+  var ids = ["0", "5", "10", "15", "20", "1", "6", "11", "16", "21", "2", "7", "12", "17", "22", "3", "8", "13", "18", "23", "4", "9", "14", "19", "24"];
+  var clickCount = 0;
+  var twodarray = [["0", "5", "10", "15", "20"], ["1", "6", "11", "16", "21"], ["2", "7", "12", "17", "22"], ["3", "8", "13", "18", "23"], ["4", "9", "14", "19", "24"]];
+  
+  var treasureLocation = 18;
+  function makeGuess(position) {
+    id = ids[position]
+    if (id==treasureLocation) {
+      document.getElementById(id).src = "jewel.jpg";
+    }
+    else{
+      document.getElementById(id).src = "emptybox.jpg";
+    }
+    clickCount+=1
+    document.getElementById("clicks").innerHTML = "Number of clicks is " + clickCount;
+    value = distance(position, treasureLocation);
+    document.getElementById("distance").innerHTML = "Distance is " + value;
+  }
+  function distance(pos1, pos2) {
+    let a = 0, b = 0, c = 0, d = 0;
+    for (let i = 0; i < 5; i++) {
+            for (let j = 0; j < 5; j++)
+            if (twodarray[i][j] == pos1) {
+            a = i;
+            b = j;
+            break;
+            }
+      }
+    for (let i = 0; i < 5; i++) {
+          for (let j = 0; j < 5; j++)
+          if (twodarray[i][j] == pos2) {
+          c = i;
+          d = j;
+          break;
+            }
+          }
+    let distance = Math.abs(c - a) + Math.abs(d - b);
+    return distance;
+  }
+</script>
+
+</body>
 </html>
