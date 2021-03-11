@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html> <head> <style>
+    .flex-container {
+      display: flex;  flex-direction:row;
+      background-color: red;
+  }
+
+.flex-container > div {  /*div children of the flex container*/
+  background-color: #f1f1f1; 
+  margin: 10px;  padding: 20px;  font-size: 30px;
+}
+
+/* Responsive layout */
+@media (max-width: 600px) { 
+	 .flex-container{
+		 flex-direction:column;
+		 background-color: green;
+	  }
+	}
+</style>
+<title></title>
+</head>
+
+
+
+<body>
+    <header>Akhil Kumar Reddy Mallepally builds a list</header>
+
+    <input type="text" id="input1" name="input1">
+
+    
+    <div class="flex-container" id="target">
+        <div class="listy">row item 1</div>   
+        <div class="listy">row item 2</div>  
+        <div class="listy">row item 3</div>  
+    </div>
+	
+	<p> Press the button to create an new element of type div and then add it to the container.
+		</p>
+		<button onclick="makeNewDiv()">Add one</button>
+	
+	
+</body>
+<script>
+    
+	function makeNewDiv() {
+        const element = document.createElement("div");
+        element.innerHTML = document.getElementById("input1").value;
+        element.setAttribute('class', 'listy');
+        element.style.color = "green";
+
+        let listyItems = document.getElementsByClassName("listy");
+        len = listyItems.length;
+        var j = 0;
+        if (len > 8) {
+            for (var i = 8; i > 0; i--) {
+                console.log(listyItems[i].innerHTML)
+                if (listyItems[i].innerHTML == element.innerHTML) {
+                    listyItems[i].remove();
+                    console.log("We are getting rid of duplicates");
+                    j = 1;
+                }
+            }
+            if (j == 0) {
+                var random = Math.floor(Math.random() * 9);
+                listyItems[random].remove();
+                console.log("We get rid of the first item.")
+            }
+        }
+        document.getElementById('target').appendChild(element)
+    }
+</script>
+</html>
